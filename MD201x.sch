@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -25544,7 +25544,7 @@ Source: &lt;a href="http://www.onsemi.com/PowerSolutions/document/NCV7351-D.PDF"
 </package>
 </packages>
 <symbols>
-<symbol name="STM32F103C8">
+<symbol name="STM32F303C*">
 <wire x1="-30.48" y1="30.48" x2="-30.48" y2="-33.02" width="0.254" layer="94"/>
 <wire x1="-30.48" y1="-33.02" x2="33.02" y2="-33.02" width="0.254" layer="94"/>
 <wire x1="33.02" y1="-33.02" x2="33.02" y2="30.48" width="0.254" layer="94"/>
@@ -25553,11 +25553,11 @@ Source: &lt;a href="http://www.onsemi.com/PowerSolutions/document/NCV7351-D.PDF"
 <pin name="PC13-TAMPER-RTC" x="-35.56" y="10.16" length="middle"/>
 <pin name="PC14-OSC32_IN" x="-35.56" y="7.62" length="middle"/>
 <pin name="PC15-OSC32_OUT" x="-35.56" y="5.08" length="middle"/>
-<pin name="OSC_IN" x="-35.56" y="2.54" length="middle" direction="in"/>
-<pin name="OSC_OUT" x="-35.56" y="0" length="middle" direction="out"/>
+<pin name="PF0-OSC_IN" x="-35.56" y="2.54" length="middle" direction="in"/>
+<pin name="PF1-OSC_OUT" x="-35.56" y="0" length="middle" direction="out"/>
 <pin name="NRST" x="-35.56" y="-2.54" length="middle"/>
-<pin name="VSSA" x="-35.56" y="-5.08" length="middle"/>
-<pin name="VDDA" x="-35.56" y="-7.62" length="middle"/>
+<pin name="VSSA-VREF-" x="-35.56" y="-5.08" length="middle"/>
+<pin name="VDDA-VREF+" x="-35.56" y="-7.62" length="middle"/>
 <pin name="PA0-WKUP" x="-35.56" y="-10.16" length="middle"/>
 <pin name="PA1" x="-35.56" y="-12.7" length="middle"/>
 <pin name="PA2" x="-35.56" y="-15.24" length="middle"/>
@@ -25568,7 +25568,7 @@ Source: &lt;a href="http://www.onsemi.com/PowerSolutions/document/NCV7351-D.PDF"
 <pin name="PA7" x="-2.54" y="-38.1" length="middle" rot="R90"/>
 <pin name="PB0" x="0" y="-38.1" length="middle" rot="R90"/>
 <pin name="PB1" x="2.54" y="-38.1" length="middle" rot="R90"/>
-<pin name="PB2-BOOT1" x="5.08" y="-38.1" length="middle" rot="R90"/>
+<pin name="PB2" x="5.08" y="-38.1" length="middle" rot="R90"/>
 <pin name="PB10" x="7.62" y="-38.1" length="middle" rot="R90"/>
 <pin name="PB11" x="10.16" y="-38.1" length="middle" rot="R90"/>
 <pin name="VSS$1" x="12.7" y="-38.1" length="middle" direction="pas" rot="R90"/>
@@ -25598,27 +25598,19 @@ Source: &lt;a href="http://www.onsemi.com/PowerSolutions/document/NCV7351-D.PDF"
 <pin name="VSS$3" x="-10.16" y="35.56" length="middle" direction="pas" rot="R270"/>
 <pin name="VDD$3" x="-12.7" y="35.56" length="middle" direction="pas" rot="R270"/>
 <text x="2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="STM32F103C8" prefix="IC">
-<description>&lt;b&gt;STMicroelectronics STM32F103C8&lt;/b&gt; &lt;br /&gt;
-Mainstream Performance line, ARM Cortex-M3 MCU with 64 Kbytes Flash, 72 MHz CPU, motor control, USB and CAN&lt;br /&gt;
-references:
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.st.com/resource/en/datasheet/stm32f103c8.pdf"&gt;datasheet&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.st.com/ja/microcontrollers/stm32f103c8.html"&gt;product page&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+<deviceset name="STM32F303C*">
 <gates>
-<gate name="G$1" symbol="STM32F103C8" x="0" y="0"/>
+<gate name="G$1" symbol="STM32F303C*" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="LQFP48">
 <connects>
 <connect gate="G$1" pin="BOOT0" pad="44"/>
 <connect gate="G$1" pin="NRST" pad="7"/>
-<connect gate="G$1" pin="OSC_IN" pad="5"/>
-<connect gate="G$1" pin="OSC_OUT" pad="6"/>
 <connect gate="G$1" pin="PA0-WKUP" pad="10"/>
 <connect gate="G$1" pin="PA1" pad="11"/>
 <connect gate="G$1" pin="PA10" pad="31"/>
@@ -25643,7 +25635,7 @@ references:
 <connect gate="G$1" pin="PB13" pad="26"/>
 <connect gate="G$1" pin="PB14" pad="27"/>
 <connect gate="G$1" pin="PB15" pad="28"/>
-<connect gate="G$1" pin="PB2-BOOT1" pad="20"/>
+<connect gate="G$1" pin="PB2" pad="20"/>
 <connect gate="G$1" pin="PB3-JTDO" pad="39"/>
 <connect gate="G$1" pin="PB4-JNTRST" pad="40"/>
 <connect gate="G$1" pin="PB5" pad="41"/>
@@ -25654,15 +25646,17 @@ references:
 <connect gate="G$1" pin="PC13-TAMPER-RTC" pad="2"/>
 <connect gate="G$1" pin="PC14-OSC32_IN" pad="3"/>
 <connect gate="G$1" pin="PC15-OSC32_OUT" pad="4"/>
+<connect gate="G$1" pin="PF0-OSC_IN" pad="5"/>
+<connect gate="G$1" pin="PF1-OSC_OUT" pad="6"/>
 <connect gate="G$1" pin="VBAT" pad="1"/>
 <connect gate="G$1" pin="VDD$1" pad="24"/>
 <connect gate="G$1" pin="VDD$2" pad="36"/>
 <connect gate="G$1" pin="VDD$3" pad="48"/>
-<connect gate="G$1" pin="VDDA" pad="9"/>
+<connect gate="G$1" pin="VDDA-VREF+" pad="9"/>
 <connect gate="G$1" pin="VSS$1" pad="23"/>
 <connect gate="G$1" pin="VSS$2" pad="35"/>
 <connect gate="G$1" pin="VSS$3" pad="47"/>
-<connect gate="G$1" pin="VSSA" pad="8"/>
+<connect gate="G$1" pin="VSSA-VREF-" pad="8"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -27552,6 +27546,149 @@ www.irf.com&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="con-molex-usb">
+<description>&lt;b&gt;USB PCB CONNECTORS&lt;/b&gt;&lt;br/&gt;
+from &lt;a href="http://www.molex.com/"&gt;MOLEX&lt;/a&gt;.&lt;br/&gt;
+&lt;br/&gt;
+(C) 2014 Tomasz Boleslaw CEDRO, cederom@tlen.pl, &lt;a href="http://www.tomek.cedro.info"&gt;http://www.tomek.cedro.info&lt;/a&gt;.&lt;br/&gt;
+&lt;br/&gt;
+Version 0.1 (2014-01-17): Initial release.</description>
+<packages>
+<package name="47589-0001">
+<description>&lt;b&gt;MICRO USB RECEPTACLES&lt;/b&gt;&lt;br/&gt;
+&lt;i&gt;Micro-USB Receptacles, SMT, Lead-Free&lt;/i&gt;&lt;br/&gt;
+from &lt;a href="http://www.molex.com/"&gt;MOLEX&lt;/a&gt;.&lt;br/&gt;
+&lt;br/&gt;
+(C) 2014 Tomasz Boleslaw CEDRO, cederom@tlen.pl, &lt;a href="http://www.tomek.cedro.info"&gt;http://www.tomek.cedro.info&lt;/a&gt;.&lt;br/&gt;
+&lt;br/&gt;
+Version 0.1 (2014-01-17): Initial release.&lt;br/&gt;
+Version 0.2 (2014-02-06): Updated 47589-0001 footprint pins/pads/milling.&lt;br/&gt;
+&lt;br/&gt;
+Following devices are included:&lt;br/&gt;
+1. &lt;a href="http://www.molex.com/molex/products/datasheet.jsp?part=active/0475890001_IO_CONNECTORS.xml"&gt;47589-0001
+
+Micro-USB AB Receptacle, Bottom Mount, SMT, Lead-Free&lt;/a&gt; (&lt;a href="http://www.molex.com/pdm_docs/sd/475890001_sd.pdf"&gt;Technical Drawing&lt;/a&gt;).
+&lt;br/&gt;</description>
+<wire x1="-1.45" y1="4" x2="-1.45" y2="-4" width="0.05" layer="51" style="shortdash"/>
+<wire x1="-2.15" y1="3.75" x2="2.85" y2="3.75" width="0.05" layer="21"/>
+<wire x1="2.85" y1="3.75" x2="2.85" y2="-3.75" width="0.05" layer="21"/>
+<wire x1="2.85" y1="-3.75" x2="-2.15" y2="-3.75" width="0.05" layer="21"/>
+<wire x1="-2.15" y1="-3.75" x2="-2.15" y2="3.75" width="0.05" layer="21"/>
+<wire x1="2.85" y1="3.75" x2="2.85" y2="2.5" width="0.05" layer="51"/>
+<wire x1="2.85" y1="2.5" x2="2.85" y2="1.95" width="0.05" layer="51"/>
+<wire x1="2.85" y1="1.95" x2="2.85" y2="-1.95" width="0.05" layer="51"/>
+<wire x1="2.85" y1="-1.95" x2="2.85" y2="-2.5" width="0.05" layer="51"/>
+<wire x1="2.85" y1="-2.5" x2="2.85" y2="-3.75" width="0.05" layer="51"/>
+<wire x1="2.85" y1="-3.75" x2="-2.15" y2="-3.75" width="0.05" layer="51"/>
+<wire x1="-2.15" y1="-3.75" x2="-2.15" y2="-3.2" width="0.05" layer="51"/>
+<wire x1="-2.15" y1="-3.2" x2="-2.15" y2="3.2" width="0.05" layer="51"/>
+<wire x1="-2.15" y1="3.2" x2="-2.15" y2="3.75" width="0.05" layer="51"/>
+<wire x1="-2.15" y1="3.75" x2="2.85" y2="3.75" width="0.05" layer="51"/>
+<wire x1="2.85" y1="2.5" x2="3.05" y2="2.5" width="0.05" layer="51"/>
+<wire x1="3.05" y1="2.5" x2="3.05" y2="1.95" width="0.05" layer="51"/>
+<wire x1="3.05" y1="1.95" x2="2.85" y2="1.95" width="0.05" layer="51"/>
+<wire x1="2.85" y1="-1.95" x2="3.05" y2="-1.95" width="0.05" layer="51"/>
+<wire x1="3.05" y1="-1.95" x2="3.05" y2="-2.5" width="0.05" layer="51"/>
+<wire x1="3.05" y1="-2.5" x2="2.85" y2="-2.5" width="0.05" layer="51"/>
+<wire x1="-2.15" y1="-3.75" x2="-2.75" y2="-4.1" width="0.05" layer="51"/>
+<wire x1="-2.15" y1="3.75" x2="-2.75" y2="4.1" width="0.05" layer="51"/>
+<wire x1="-2.75" y1="3.2" x2="-2.75" y2="-3.2" width="0.05" layer="51"/>
+<wire x1="-2.75" y1="-3.2" x2="-2.15" y2="-3.2" width="0.05" layer="51"/>
+<wire x1="-2.75" y1="3.2" x2="-2.15" y2="3.2" width="0.05" layer="51"/>
+<pad name="CASING2" x="0" y="-3.5" drill="1.1" diameter="1.6" thermals="no"/>
+<pad name="CASING1" x="0" y="3.5" drill="1.1" diameter="1.6" thermals="no"/>
+<pad name="CASING3" x="2.7" y="2.5" drill="0.85" diameter="1.25"/>
+<pad name="CASING4" x="2.7" y="-2.5" drill="0.85" diameter="1.25"/>
+<smd name="5" x="2.7" y="-1.3" dx="1.35" dy="0.4" layer="1"/>
+<smd name="4" x="2.7" y="-0.65" dx="1.35" dy="0.4" layer="1"/>
+<smd name="3" x="2.7" y="0" dx="1.35" dy="0.4" layer="1"/>
+<smd name="2" x="2.7" y="0.65" dx="1.35" dy="0.4" layer="1"/>
+<smd name="1" x="2.7" y="1.3" dx="1.35" dy="0.4" layer="1"/>
+<smd name="P$2" x="0" y="1" dx="1.55" dy="1.5" layer="1"/>
+<smd name="P$3" x="0" y="-1" dx="1.55" dy="1.5" layer="1"/>
+<smd name="P$4" x="0" y="-2.9" dx="1.55" dy="1.2" layer="1"/>
+<smd name="P$1" x="0" y="2.9" dx="1.55" dy="1.2" layer="1" rot="R180"/>
+<text x="5.08" y="3.81" size="1.27" layer="25" font="vector" rot="R270">&gt;NAME</text>
+</package>
+</packages>
+<symbols>
+<symbol name="MICRO-USB-AB-RECEPTACLE">
+<wire x1="-2.54" y1="6.35" x2="-2.54" y2="-6.35" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-6.35" x2="-1.27" y2="-7.62" width="0.254" layer="94" curve="90"/>
+<wire x1="-1.27" y1="-7.62" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="1.016" y2="-8.128" width="0.254" layer="94" curve="-53.130102"/>
+<wire x1="1.016" y1="-8.128" x2="2.54" y2="-8.89" width="0.254" layer="94" curve="53.130102"/>
+<wire x1="2.54" y1="-8.89" x2="5.08" y2="-8.89" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-8.89" x2="6.35" y2="-7.62" width="0.254" layer="94" curve="90"/>
+<wire x1="6.35" y1="-7.62" x2="6.35" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="6.35" x2="-1.27" y2="7.62" width="0.254" layer="94" curve="-90"/>
+<wire x1="-1.27" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="1.016" y2="8.128" width="0.254" layer="94" curve="53.130102"/>
+<wire x1="1.016" y1="8.128" x2="2.54" y2="8.89" width="0.254" layer="94" curve="-53.130102"/>
+<wire x1="2.54" y1="8.89" x2="5.08" y2="8.89" width="0.254" layer="94"/>
+<wire x1="5.08" y1="8.89" x2="6.35" y2="7.62" width="0.254" layer="94" curve="-90"/>
+<wire x1="0" y1="5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="1.27" y2="-6.35" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-6.35" x2="3.81" y2="-6.35" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-6.35" x2="3.81" y2="6.35" width="0.254" layer="94"/>
+<wire x1="3.81" y1="6.35" x2="1.27" y2="6.35" width="0.254" layer="94"/>
+<wire x1="1.27" y1="6.35" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="10.16" x2="7.62" y2="10.16" width="0.254" layer="94" style="shortdash"/>
+<wire x1="7.62" y1="10.16" x2="7.62" y2="-10.16" width="0.254" layer="94" style="shortdash"/>
+<wire x1="7.62" y1="-10.16" x2="-2.54" y2="-10.16" width="0.254" layer="94" style="shortdash"/>
+<text x="-2.54" y="11.43" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<text x="10.16" y="-7.62" size="1.778" layer="96" font="vector" rot="R90">&gt;VALUE</text>
+<pin name="1" x="-5.08" y="5.08" visible="pin" direction="in"/>
+<pin name="2" x="-5.08" y="2.54" visible="pin" direction="in"/>
+<pin name="3" x="-5.08" y="0" visible="pin" direction="in"/>
+<pin name="4" x="-5.08" y="-2.54" visible="pin" direction="in"/>
+<pin name="5" x="-5.08" y="-5.08" visible="pin" direction="in"/>
+<pin name="GND1" x="-2.54" y="-12.7" visible="off" length="short" rot="R90"/>
+<pin name="GND2" x="0" y="-12.7" visible="off" length="short" rot="R90"/>
+<pin name="GND3" x="2.54" y="-12.7" visible="off" length="short" rot="R90"/>
+<pin name="GND4" x="5.08" y="-12.7" visible="off" length="short" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MICRO-USB-RECEPTACLE">
+<description>&lt;b&gt;MICRO USB RECEPTACLES&lt;/b&gt;&lt;br/&gt;
+&lt;i&gt;Micro-USB Receptacles, SMT, Lead-Free&lt;/i&gt;&lt;br/&gt;
+from &lt;a href="http://www.molex.com/"&gt;MOLEX&lt;/a&gt;.&lt;br/&gt;
+&lt;br/&gt;
+(C) 2014 Tomasz Boleslaw CEDRO, cederom@tlen.pl, &lt;a href="http://www.tomek.cedro.info"&gt;http://www.tomek.cedro.info&lt;/a&gt;.&lt;br/&gt;
+&lt;br/&gt;
+Version 0.1 (2014-01-17): Initial release.&lt;br/&gt;
+Version 0.2 (2014-02-06): Updated 47589-0001 footprint pins/pads/milling.&lt;br/&gt;
+&lt;br/&gt;
+Following devices are included:&lt;br/&gt;
+1. &lt;a href="http://www.molex.com/molex/products/datasheet.jsp?part=active/0475890001_IO_CONNECTORS.xml"&gt;47589-0001
+
+Micro-USB AB Receptacle, Bottom Mount, SMT, Lead-Free&lt;/a&gt; (&lt;a href="http://www.molex.com/pdm_docs/sd/475890001_sd.pdf"&gt;Technical Drawing&lt;/a&gt;).
+&lt;br/&gt;</description>
+<gates>
+<gate name="G$1" symbol="MICRO-USB-AB-RECEPTACLE" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="47589-0001" package="47589-0001">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="GND1" pad="CASING1 P$1 P$2"/>
+<connect gate="G$1" pin="GND2" pad="CASING2 P$3 P$4"/>
+<connect gate="G$1" pin="GND3" pad="CASING3"/>
+<connect gate="G$1" pin="GND4" pad="CASING4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -27587,7 +27724,7 @@ www.irf.com&lt;p&gt;
 <part name="C21" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="R20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="4k7"/>
 <part name="R21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="470"/>
-<part name="U1" library="stm32_mcu" deviceset="STM32F103C8" device=""/>
+<part name="U1" library="stm32_mcu" deviceset="STM32F303C*" device=""/>
 <part name="P+12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="P+19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="P+20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
@@ -27642,7 +27779,6 @@ www.irf.com&lt;p&gt;
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDA" device=""/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDA" device=""/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDA" device=""/>
-<part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDA" device=""/>
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDA" device=""/>
 <part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDA" device=""/>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDA" device=""/>
@@ -27761,6 +27897,8 @@ www.irf.com&lt;p&gt;
 <part name="R23" library="rcl" deviceset="R-EU_" device="R0603" value="10"/>
 <part name="C31" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2"/>
 <part name="U$4" library="lib_ysk" deviceset="DGD05473" device="FN" package3d_urn="urn:adsk.eagle:package:12826382/1"/>
+<part name="U$5" library="con-molex-usb" deviceset="MICRO-USB-RECEPTACLE" device="47589-0001"/>
+<part name="D4" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="DIODE-" device="SOD323-R" package3d_urn="urn:adsk.eagle:package:43437/1" value="BAS16W"/>
 </parts>
 <sheets>
 <sheet>
@@ -28085,6 +28223,10 @@ www.irf.com&lt;p&gt;
 <attribute name="VALUE" x="191.516" y="-51.181" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="U$4" gate="G$1" x="12.7" y="27.94" smashed="yes"/>
+<instance part="D4" gate="G$1" x="40.64" y="106.68" smashed="yes" rot="R90">
+<attribute name="NAME" x="40.1574" y="109.22" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="42.9514" y="109.22" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -28750,6 +28892,7 @@ www.irf.com&lt;p&gt;
 </sheet>
 <sheet>
 <plain>
+<text x="-17.78" y="99.06" size="3.81" layer="97">DFNのATA6560/1に変えたい</text>
 </plain>
 <instances>
 <instance part="J1" gate="G$1" x="99.06" y="60.96" smashed="yes">
@@ -29238,12 +29381,14 @@ www.irf.com&lt;p&gt;
 <plain>
 <text x="96.52" y="127" size="3.81" layer="97">TODO: BOOT0をジャンパで切り替えられるようにする</text>
 <text x="-5.08" y="165.1" size="3.81" layer="97">TODO: デバッガ用コネクタを最適化する</text>
-<text x="12.7" y="-17.78" size="3.81" layer="97">TODO: エンコーダ入力を5Vトレラントにする</text>
+<text x="12.7" y="-17.78" size="3.81" layer="97">TODO: エンコーダ入力を5Vトレラントにする
+エンコーダ入力にLPF入れる</text>
 <text x="208.28" y="27.94" size="3.81" layer="97">TODO: PWM信号を直列終端する</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="114.3" y="55.88" smashed="yes">
-<attribute name="NAME" x="116.84" y="58.42" size="1.27" layer="94"/>
+<attribute name="NAME" x="116.84" y="58.42" size="1.778" layer="95"/>
+<attribute name="VALUE" x="116.84" y="53.34" size="1.778" layer="96"/>
 </instance>
 <instance part="P+12" gate="G$1" x="160.02" y="68.58" smashed="yes" rot="R270">
 <attribute name="VALUE" x="154.94" y="71.12" size="1.778" layer="96"/>
@@ -29303,10 +29448,7 @@ www.irf.com&lt;p&gt;
 <attribute name="VALUE" x="124.46" y="7.62" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND14" gate="1" x="160.02" y="66.04" smashed="yes" rot="R90">
-<attribute name="VALUE" x="162.56" y="63.5" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="GND15" gate="1" x="111.76" y="99.06" smashed="yes" rot="R180">
-<attribute name="VALUE" x="114.3" y="101.6" size="1.778" layer="96" rot="R270"/>
+<attribute name="VALUE" x="162.56" y="66.04" size="1.778" layer="96"/>
 </instance>
 <instance part="GND16" gate="1" x="104.14" y="99.06" smashed="yes" rot="R180">
 <attribute name="VALUE" x="106.68" y="101.6" size="1.778" layer="96" rot="R270"/>
@@ -29422,6 +29564,10 @@ www.irf.com&lt;p&gt;
 <instance part="CN2" gate="G$1" x="114.3" y="-50.8" smashed="yes">
 <attribute name="NAME" x="110.49" y="-44.45" size="1.778" layer="95"/>
 <attribute name="VALUE" x="110.49" y="-58.42" size="1.778" layer="96"/>
+</instance>
+<instance part="U$5" gate="G$1" x="238.76" y="-27.94" smashed="yes">
+<attribute name="NAME" x="236.22" y="-16.51" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="248.92" y="-35.56" size="1.778" layer="96" font="vector" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -29592,7 +29738,7 @@ www.irf.com&lt;p&gt;
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="OSC_OUT"/>
+<pinref part="U1" gate="G$1" pin="PF1-OSC_OUT"/>
 <wire x1="27.94" y1="55.88" x2="78.74" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="X1" gate="G$1" pin="3"/>
 </segment>
@@ -29602,7 +29748,7 @@ www.irf.com&lt;p&gt;
 <wire x1="12.7" y1="55.88" x2="10.16" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="55.88" x2="10.16" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="63.5" x2="30.48" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="OSC_IN"/>
+<pinref part="U1" gate="G$1" pin="PF0-OSC_IN"/>
 <wire x1="30.48" y1="63.5" x2="30.48" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="58.42" x2="78.74" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="X1" gate="G$1" pin="1"/>
@@ -29686,7 +29832,7 @@ www.irf.com&lt;p&gt;
 <pinref part="GND11" gate="1" pin="GNDA"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="VSSA"/>
+<pinref part="U1" gate="G$1" pin="VSSA-VREF-"/>
 <wire x1="33.02" y1="17.78" x2="33.02" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="50.8" x2="78.74" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="GND12" gate="1" pin="GNDA"/>
@@ -29700,11 +29846,6 @@ www.irf.com&lt;p&gt;
 <pinref part="U1" gate="G$1" pin="VSS$2"/>
 <wire x1="157.48" y1="66.04" x2="152.4" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="GND14" gate="1" pin="GNDA"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="BOOT0"/>
-<wire x1="111.76" y1="96.52" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="GND15" gate="1" pin="GNDA"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VSS$3"/>
@@ -29819,7 +29960,7 @@ www.irf.com&lt;p&gt;
 </net>
 <net name="3V3A" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="VDDA"/>
+<pinref part="U1" gate="G$1" pin="VDDA-VREF+"/>
 <wire x1="50.8" y1="30.48" x2="40.64" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="30.48" x2="38.1" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="30.48" x2="38.1" y2="48.26" width="0.1524" layer="91"/>
@@ -29845,18 +29986,6 @@ www.irf.com&lt;p&gt;
 <segment>
 <wire x1="256.54" y1="55.88" x2="271.78" y2="55.88" width="0.1524" layer="91"/>
 <label x="259.08" y="55.88" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="IN_LO_A" class="0">
-<segment>
-<wire x1="256.54" y1="91.44" x2="271.78" y2="91.44" width="0.1524" layer="91"/>
-<label x="259.08" y="91.44" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="IN_LO_B" class="0">
-<segment>
-<wire x1="256.54" y1="38.1" x2="271.78" y2="38.1" width="0.1524" layer="91"/>
-<label x="259.08" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IN_A" class="0">
@@ -29906,25 +30035,6 @@ www.irf.com&lt;p&gt;
 <wire x1="218.44" y1="50.8" x2="152.4" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="IN_LO_A_PRE" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PB14"/>
-<wire x1="152.4" y1="45.72" x2="208.28" y2="45.72" width="0.1524" layer="91"/>
-<label x="185.42" y="45.72" size="1.778" layer="95"/>
-<label x="228.6" y="88.9" size="1.778" layer="95"/>
-<wire x1="231.14" y1="88.9" x2="208.28" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="88.9" x2="208.28" y2="45.72" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="IN_LO_B_PRE" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PB13"/>
-<label x="193.04" y="40.64" size="1.778" layer="95"/>
-<wire x1="152.4" y1="43.18" x2="213.36" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="43.18" x2="213.36" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="35.56" x2="231.14" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="JMP0" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PB1"/>
@@ -29939,7 +30049,7 @@ www.irf.com&lt;p&gt;
 </net>
 <net name="JMP1" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PB2-BOOT1"/>
+<pinref part="U1" gate="G$1" pin="PB2"/>
 <wire x1="119.38" y1="17.78" x2="119.38" y2="0" width="0.1524" layer="91"/>
 <label x="119.38" y="2.54" size="1.778" layer="95" rot="R90"/>
 </segment>
@@ -29990,6 +30100,27 @@ www.irf.com&lt;p&gt;
 <wire x1="106.68" y1="-7.62" x2="106.68" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="PA5"/>
 <label x="106.68" y="-5.08" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="BOOT0" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="BOOT0"/>
+<wire x1="111.76" y1="116.84" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
+<label x="111.76" y="109.22" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="USB_DM" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PA11"/>
+<wire x1="152.4" y1="58.42" x2="177.8" y2="58.42" width="0.1524" layer="91"/>
+<label x="175.26" y="58.42" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="USB_DP" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PA12"/>
+<wire x1="152.4" y1="60.96" x2="177.8" y2="60.96" width="0.1524" layer="91"/>
+<label x="175.26" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -30117,6 +30248,10 @@ www.irf.com&lt;p&gt;
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
